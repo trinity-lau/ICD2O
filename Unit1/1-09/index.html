@@ -52,22 +52,24 @@
         </form>
 
         <!-- Colored FAB button with ripple -->
-        <button id="searchButton" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+        <button id="searchButton"
+          class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
           <i class="material-icons">search</i>
           <button id="clearButton" class="mdl-button mdl-js-button">Clear</button>
         </button>
-<script>
-  const button = document.getElementById('searchButton');
-  const input = document.getElementById('userInput');
+        <script>
+          const button = document.getElementById('searchButton');
+          const input = document.getElementById('userInput');
 
-  button.addEventListener('click', function () {
-    const q = (input.value || '').trim();
-    const url = 'https://www.google.com/search?q=' + encodeURIComponent(q);
-    window.open(url, '_blank');
-document.getElementById('clearButton').addEventListener('click', () => {
-      document.getElementById('userInput').value = '';
-      document.getElementById('userInput').focus();
-  });
-</script>
+          button.addEventListener('click', function () {
+            const q = (input.value || '').trim();
+            const url = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+            window.open(url, '_blank');
+          });
+          document.getElementById('clearButton').addEventListener('click', () => {
+            document.getElementById('userInput').value = '';
+            document.getElementById('userInput').focus();
+          });
+        </script>
 </body>
 </html>
